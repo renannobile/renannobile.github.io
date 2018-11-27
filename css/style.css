@@ -1,0 +1,79 @@
+@import "https://fonts.googleapis.com/css?family=Roboto+Mono:400,900";
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+body,
+html {
+  min-height: 100vh;
+}
+
+body {
+  --shadow-color: rgba(0, 0, 0, 0.14);
+  --default-radius: 10px;
+  --main-text-color: rgba(0, 0, 0, 0.84);
+
+  background: #fafafa;
+  color: var(var(--main-text-color));
+  font-family: "Roboto Mono";
+  margin: 0;
+  font-size: 18px;
+}
+
+#intro {
+  user-select: none;
+  cursor: pointer;
+}
+
+#to-top {
+  opacity: 0;
+  transform: scale(0);
+  transition: all .185s;
+}
+
+#to-top.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.welcome {
+  letter-spacing: 1rem;
+}
+
+.is-underlined {
+  text-decoration: underline;
+}
+
+.is-fab {
+  background-color: whitesmoke;
+  color: var(--main-text-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 3px 5px var(--shadow-color), 3px 0 5px var(--shadow-color), -3px 0 5px var(--shadow-color);
+
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  padding: .5em;
+
+  line-height: calc(64px - 0.5em);
+  height: 64px;
+  width: 64px;
+
+  text-align: center;
+}
+
+.hero.is-deep-purple {
+  background-color: #673AB7;
+}
+
+.hero.is-deep-purple .title,
+.hero.is-deep-purple .subtitle {
+  color: white
+}
+
+
+.hero.is-bold.is-deep-purple {
+  background: linear-gradient(141deg,#673AB7 0,#764dbe 71%,#8561c5 100%);
+  color: white;
+}
