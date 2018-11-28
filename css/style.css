@@ -26,7 +26,7 @@ body {
 #to-top {
   opacity: 0;
   transform: scale(0);
-  transition: all .185s;
+  transition: all 0.185s;
 }
 
 #to-top.active {
@@ -34,12 +34,18 @@ body {
   transform: scale(1);
 }
 
-.welcome {
-  letter-spacing: 1rem;
+.experience-list > li > div {
+  align-items: center;
 }
 
-.is-underlined {
-  text-decoration: underline;
+.experience-list > li > div .icon {
+  margin: 0 0.5em;
+}
+
+.content .experience-list li + li {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 3px dashed;
 }
 
 .is-fab {
@@ -49,12 +55,13 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0 3px 5px var(--shadow-color), 3px 0 5px var(--shadow-color), -3px 0 5px var(--shadow-color);
+  box-shadow: 0 3px 5px var(--shadow-color), 3px 0 5px var(--shadow-color),
+    -3px 0 5px var(--shadow-color);
 
   position: fixed;
   bottom: 1em;
   right: 1em;
-  padding: .5em;
+  padding: 0.5em;
 
   line-height: calc(64px - 0.5em);
   height: 64px;
@@ -63,17 +70,56 @@ body {
   text-align: center;
 }
 
+.is-deep-purple {
+  background-color: #673ab7;
+  color: white;
+}
+
 .hero.is-deep-purple {
-  background-color: #673AB7;
+  background-color: #673ab7;
 }
 
 .hero.is-deep-purple .title,
 .hero.is-deep-purple .subtitle {
-  color: white
+  color: white;
 }
 
-
 .hero.is-bold.is-deep-purple {
-  background: linear-gradient(141deg,#673AB7 0,#764dbe 71%,#8561c5 100%);
+  background: linear-gradient(141deg, #673ab7 0, #764dbe 71%, #8561c5 100%);
   color: white;
+}
+
+.content .work-info p {
+  margin-bottom: 0;
+}
+
+.work-info .divider {
+  display: none;
+}
+
+.work-info .place {
+  font-weight: bold;
+}
+
+.welcome {
+  letter-spacing: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .content ul {
+    list-style: none;
+    margin-left: 0;
+  }
+
+  .work-info .icon {
+    display: none;
+  }
+
+  .work-info .divider {
+    display: inline;
+  }
+
+  .content .work-info .date {
+    margin-bottom: 0.5em;
+  }
 }
